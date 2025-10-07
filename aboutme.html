@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zaoui Ahmed Portfolio</title>
+<style>
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    background: #fff;
+    color: #000;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  header .logo {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  header .logo .blue-square {
+    background: #0057FF;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+  }
+  header .logo .name {
+    font-weight: 700;
+  }
+  header .logo .light {
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  header nav a {
+    margin-left: 1.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #000;
+  }
+  header nav a.active,
+  header nav a:hover {
+    color: #0057FF;
+  }
+
+  /* MAIN CONTAINER */
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: nowrap;
+    padding: 2rem 4rem 3rem 4rem;
+    min-height: 600px;
+  }
+
+  /* LEFT BG with profile card */
+  .left-bg {
+    background: #E6DBD2;
+    width: 500px;
+    height: 550px;
+    position: relative;
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-card {
+    background: #F6F0EB;
+    width: 100vw;
+    padding: 2.25rem 1.75rem 2rem 1.75rem;
+    border-radius: 4px;
+    box-shadow: 0 12px 30px rgb(0 0 0 / 0.15);
+    text-align: center;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+  }
+  .profile-card h2 {
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.15;
+    user-select: none;
+  }
+  .profile-card p {
+    font-weight: 400;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    margin-top: 1rem;
+    color: #777;
+    user-select: none;
+  }
+  .profile-card .blue-underline {
+    height: 2px;
+    width: 40px;
+    background: #0057FF;
+    margin-top: 1.1rem;
+    border-radius: 2px;
+    user-select: none;
+  }
+  .profile-card .social-links {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: white;
+    height: 10%; /* or your preferred height */
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  .profile-card .linkedin-link {
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    user-select: none;
+  }
+  .profile-card .linkedin-link:hover {
+    color: #0057FF;
+  }
+
+  /* RIGHT CONTENT */
+  .right-content {
+    max-width: 560px;
+    flex-grow: 1;
+  }
+  .right-content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 0.25rem;
+  }
+  .right-content h3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+    user-select: none;
+  }
+
+  /* BUTTONS */
+  .btn-group {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .btn {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.375rem 1.2rem;
+    border-radius: 22px;
+    cursor: pointer;
+    border: 2px solid #0057FF;
+    background-color: transparent;
+    color: #000;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+  .btn.resume-btn {
+    background: #0057FF;
+    border-color: #0057FF;
+    color: white;
+  }
+  .btn.resume-btn:hover {
+    background: #003fbd;
+    border-color: #003fbd;
+  }
+  .btn.projects-btn:hover {
+    background: #e6f0ff;
+    border-color: #0057FF;
+  }
+
+  /* DESCRIPTION */
+  .right-content p.description {
+    font-weight: 400;
+    font-size: 0.875rem;
+    max-width: 480px;
+    white-space: pre-line;
+    color: #111;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #fff;
+    border-top: 1px solid #ddd;
+    font-size: 0.75rem;
+    padding: 1rem 2rem 2rem 2rem;
+    color: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    user-select: none;
+  }
+
+  footer .left,
+  footer .middle,
+  footer .right {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .left,
+  footer .middle {
+    gap: 0.3rem;
+  }
+  footer .right {
+    align-items: flex-end;
+    gap: 0.3rem;
+  }
+  footer .right a {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #000;
+  }
+  footer .right a:hover {
+    color: #0057FF;
+  }
+
+  /* Responsive style */
+
+@media (min-width: 980px) {
+  /* existing styles */
+
+  .profile-card img {
+    width: 160px;
+    height: 160px;
+  }
+  main {
+    padding: 2rem 2rem 3rem 2rem;
+    gap: 3rem;
+    min-height: 700px;
+    justify-content: flex-start;
+  }
+  .left-bg {
+    padding-right: 20px;
+    justify-content: flex-end;
+    width: 40vw;
+    height: 600px;
+    position: relative;
+    overflow: visible; /* Ensure overflow visible for the child to move outside */
+  }
+  .profile-card {
+    justify-content: center;
+    width: 270px;
+    height: 400px;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    box-shadow: 0 12px 28px rgb(0 0 0 / 0.12);
+    
+    position: relative;
+    left: 120px; /* Move the profile card 40px left outside the left-bg */
+  }
+  .right-content {
+    max-width: 350px;
+    position: relative;
+    left: 100px;
+  }
+  .right-content h1 {
+    font-size: 4.6rem;
+  }
+  .right-content h3 {
+    font-size: 1.7rem;
+  }
+  .right-content p.description {
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
+  @media (max-width: 680px) {
+    main {
+      flex-direction: column;
+      padding: 1.5rem 1.5rem 3rem 1.5rem;
+      min-height: auto;
+    }
+    .left-bg {
+      width: 300px;
+      height: 380px;
+      border-radius: 6px;
+      margin: 0 auto;
+    }
+    .profile-card {
+      width: 100vw;
+      padding: 1.9rem 1.25rem 2rem 1.25rem;
+      box-shadow: 0 20px 40px rgb(0 0 0 / 0.15);
+      margin-top: 0px;
+      position: relative;
+      z-index: 10;
+    }
+    .right-content {
+      max-width: 100%;
+      margin-top: 0;
+      margin-bottom: 3rem;
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+    .right-content h1 {
+      font-size: 2.4rem;
+    }
+    .right-content h3 {
+      font-size: 1.05rem;
+      margin-bottom: 1.3rem;
+    }
+    .btn-group {
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .right-content p.description {
+      max-width: 100%;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    footer {
+      justify-content: center;
+      text-align: center;
+    }
+    footer .right {
+      align-items: center;
+    }
+    footer .left,
+    footer .middle,
+    footer .right {
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    header {
+      padding: 1rem 1rem;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      font-size: 0.85rem;
+    }
+    header nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    main {
+      padding: 1rem 1rem 2rem 1rem;
+      gap: 2rem;
+    }
+    .profile-card {
+      width: 100vw;
+      padding: 1.7rem 1rem 2rem 1rem;
+      box-shadow: 0 20px 48px rgb(0 0 0 / 0.15);
+      margin-top: 0px;
+    }
+    .right-content h1 {
+      font-size: 2rem;
+    }
+    .right-content h3 {
+      font-size: 1rem;
+    }
+    .btn {
+      font-size: 0.65rem;
+      padding: 0.3rem 1rem;
+    }
+    footer {
+      font-size: 0.7rem;
+      padding: 1rem;
+      gap: 0.6rem;
+    }
+    footer .left,
+    footer .middle,
+    footer .right {
+      flex-direction: column;
+      gap: 0.2rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo" aria-label="Brand and title">
+    <span class="blue-square" aria-hidden="true"></span>
+    <span class="name">Zaoui Ahmed</span><span class="light">/ Software developer</span>
+  </div>
+  <nav aria-label="Primary navigation">
+    <a href="#" class="active" aria-current="page">ABOUT ME</a>
+    <a href="#">PROJECTS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+<main>
+  <div class="left-bg" aria-hidden="true">
+    <div class="profile-card" role="region" aria-label="Profile card">
+      <img src="Assets\MyPersonalPhoto.png" alt="Profile picture of Zaoui Ahmed" width="120" height="120" />
+      <h2 class="card-name">Zaoui <br>Ahmed</h2>
+      <div class="blue-underline"></div>
+      <p>Software developer</p>
+      <div class="social-links">
+          <a class="linkedin-link" href="https://linkedin.com/in/zaoui-ahmed" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <img src="Assets\LinkedInIcon.jpg" alt="" style="width: 24px; height: 24px;">
+          </a>
+      </div>
+    </div>
+  </div>
+  <section class="right-content" role="main">
+    <h1 >Hello</h1>
+    <h3>Here's who I am &amp; what I do</h3>
+    <div class="btn-group" role="group" aria-label="Actions">
+      <button class="btn resume-btn" onclick="window.location.href='contact.html'">Contact Me</button>
+      <button class="btn projects-btn" onclick="window.location.href='#projects'">PROJECTS</button>
+    </div>
+    <p class="description">
+      ! I'm a passionate software developer specializing in backend development, software building, data management, and software architecture. With a keen interest in creating efficient and scalable solutions, I enjoy tackling complex challenges and continuously improving my skills. I'm excited to connect and collaborate on innovative projects that make a difference.
+    </p>
+  </section>
+</main>
+<footer>
+  <div class="left">
+    <span>© 2025 by Zaoui Ahmed.</span>
+    <span>Powered and secured by <a href="" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+  </div>
+  <div class="middle">
+    <strong>Call</strong>
+    <span>+216 96 812 709</span>
+  </div>
+  <div class="middle">
+    <strong>Write</strong>
+    <span>zaoui.ahmed.work@gmail.com</span>
+  </div>
+  <div class="right">
+    <strong>Follow</strong>
+    <a href="https://linkedin.com/in/zaoui-ahmed" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><img src="Assets\LinkedInIcon.jpg" alt="" style="width: 24px; height: 24px;"></a>
+  </div>
+</footer>
+</body>
+</html>
