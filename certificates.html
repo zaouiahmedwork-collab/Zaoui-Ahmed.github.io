@@ -11,8 +11,49 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.certificate-grid {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem; /* space between certificates */
+			}
+			.certificate-item {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+			}
+			@media (max-width: 768px) {
+				.certificate-item {
+					align-items: flex-start;
+				}
+
+				.certificate-item h2 {
+					font-size: 1.5rem;
+				}
+			}
+
+			@media (max-width: 600px) {
+				.certificate-item {
+					flex-direction: column;
+					align-items: center;     /* center horizontally */
+					text-align: center;      /* center text */
+				}
+
+				.certificate-item h2 {
+					font-size: 1.1rem;
+				}
+
+				.certificate-content {
+					align-items: center;     /* center button */
+				}
+				    .certificate-item .button {
+					display: none;
+				}
+
+			}
+		</style>
 	</head>
-	<body class="is-preload">
+<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -50,57 +91,53 @@
 										this section to showcase my certificates and hands on projects to demonstrate experience
 									</p>
 								</header>
-								<p>
-									<span class="image left"><img src="images\CourseraGitGihubCertif-1.png" alt="" />
-									</span>
-									
-									<br>
-									<H2><a href="" onclick="event.preventDefault()" >Getting Started with Git and GitHub</a></H2>
-									<a href="https://coursera.org/share/8f25f182ca0a3506a12d7f17d677b637" class="button" target="_blank" >Visit me</a>
-									<br>
-									<br>
-									<br>
-									<br>
-									<br>
+								
+								<div class="certificate-grid">
 
-								</p>
-								<p>
-									<span class="image left"><img src="images\Python for Data Science, AI & Development-1.png" alt="" />
+								<div class="certificate-item">
+									<span class="image left">
+									<a href="https://coursera.org/share/8f25f182ca0a3506a12d7f17d677b637" target="_blank" ><img src="images\CourseraGitGihubCertif-1.png" alt="" /></a>
 									</span>
-									<br>
-									<H2><a href="" onclick="event.preventDefault()" >Python for Data Science, AI & Development</a></H2>
-									<a href="https://coursera.org/share/c09ba2cde69b5d677bac11d3893e371c" class="button" target="_blank" >Visit me</a>
-									<br>
-									<br>
-									<br>
-									<br>
-									<br>
-								</p>
-								<p>
-									<span class="image left"><img src="images\Developing AI Applications with Python and Flask-1.png" alt="" />
+									<div class="certificate-content">
+										<h2><a href="" onclick="event.preventDefault()">Getting Started with Git and GitHub</a></h2>
+										<a href="https://coursera.org/share/8f25f182ca0a3506a12d7f17d677b637" class="button" target="_blank">Visit me</a>
+									</div>
+								</div>
+
+
+								<div class="certificate-item">
+									<span class="image left">
+									<a href="https://coursera.org/share/c09ba2cde69b5d677bac11d3893e371c" target="_blank"><img src="images\Python for Data Science, AI & Development-1.png" alt="" /></a>
 									</span>
-									<br>
-									<H2><a href="" onclick="event.preventDefault()" >Developing AI Applications with Python and Flask</a></H2>
-									<a href="https://coursera.org/share/3b412303f58a42791507aaaa3c16e9e2" class="button" target="_blank" >Visit me</a>
-									<br>
-									<br>
-									<br>
-									<br>
-									<br>
-								</p>
-								<p>
-									<span class="image left"><img src="images\softing-1.png" alt="" />
+									<div class="certificate-content">
+										<h2><a href="" onclick="event.preventDefault()">Python for Data Science, AI & Development</a></h2>
+										<a href="https://coursera.org/share/c09ba2cde69b5d677bac11d3893e371c" class="button" target="_blank">Visit me</a>
+									</div>
+								</div>
+
+
+								<div class="certificate-item">
+									<span class="image left">
+									<a href="https://coursera.org/share/3b412303f58a42791507aaaa3c16e9e2" target="_blank"><img src="images\Developing AI Applications with Python and Flask-1.png" alt="" /></a>
 									</span>
-									<br>
-									<H2><a href="" onclick="event.preventDefault()" >Introduction to Software Engineering</a></H2>
-									<a href="https://coursera.org/share/2adf12e8290e3bc52d3ec4b4d560f64b" class="button" target="_blank" >Visit me</a>
-									<br>
-									<br>
-									<br>
-									<br>
-								</p>
+									<div class="certificate-content">
+										<h2><a href="" onclick="event.preventDefault()">Developing AI Applications with Python and Flask</a></h2>
+										<a href="https://coursera.org/share/3b412303f58a42791507aaaa3c16e9e2" class="button" target="_blank">Visit me</a>
+									</div>
+								
+								
+								</div>
+									<div class="certificate-item">
+									<span class="image left">
+									<a href="https://coursera.org/share/2adf12e8290e3bc52d3ec4b4d560f64b" target="_blank"><img src="images\CourseraGitGihubCertif-1.png" alt="" /></a>
+									</span>
+									<div class="certificate-content">
+										<h2><a href="" onclick="event.preventDefault()">Introduction to Software Engineering</a></h2>
+										<a href="https://coursera.org/share/2adf12e8290e3bc52d3ec4b4d560f64b" class="button" target="_blank">Visit me</a>
+										</div>
+									</div>
+								
 							</section>
-
 					</div>
 
 				<!-- Footer -->
